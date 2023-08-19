@@ -13,7 +13,7 @@ export function getFiles(dirId, sort) {
   return async (dispatch) => {
     try {
       dispatch(showLoader());
-      let url = "http://localhost:5000/api/files";
+      let url = "api/files";
       if (sort && dirId) url += `?parent=${dirId}&sort=${sort}`;
       else if (dirId) url += "?parent=" + dirId;
       else if (sort) url += "?sort=" + sort;
@@ -33,7 +33,7 @@ export function createDir(parentDirId, name) {
   return async (dispatch) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/files/",
+        "api/files/",
         {
           name,
           parent: parentDirId,
@@ -63,7 +63,7 @@ export function uploadFile(parentDirId, file) {
       dispatch(showUploader());
       dispatch(addUploadFile(uploadFile));
       const response = await axios.post(
-        "http://localhost:5000/api/files/upload",
+        "api/files/upload",
         formData,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
@@ -93,7 +93,7 @@ export function uploadFile(parentDirId, file) {
 export async function downloadFile(file) {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/files/download?id=${file._id}`,
+      `api/files/download?id=${file._id}`,
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
@@ -118,7 +118,7 @@ export function deleteFile(file) {
   return async (dispatch) => {
     try {
       const response = await axios.delete(
-        `http://localhost:5000/api/files/?id=${file._id}`,
+        `api/files/?id=${file._id}`,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         }
@@ -134,7 +134,7 @@ export function searchFile(search) {
   return async (dispatch) => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/files/search?search=${search}`,
+        `api/files/search?search=${search}`,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         }
