@@ -1,0 +1,40 @@
+@import '../../utils/colors';
+
+.authorization {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: @background-color;
+
+    &__container {
+        margin-top: 100px;
+        padding: 40px;
+        padding-bottom: 30px;
+        border-radius: 10px;
+        background-color: @bg-primary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    &__header {
+        font-weight: 700;
+        font-size: 24px;
+        padding-bottom: 10px;
+    }
+
+    &__button {
+        width: 100%;
+        border: none;
+        font-weight: 500;
+        font-size: 14px;
+        background-color: @primary-color;
+        color: @bg-primary;
+        margin-top: 40px;
+        border-radius: 5px;
+        padding: 15px;
+    }
+}
+

@@ -1,0 +1,34 @@
+.authorization {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #ded4d4;
+}
+.authorization__container {
+  margin-top: 100px;
+  padding: 40px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+.authorization__header {
+  font-weight: 700;
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+.authorization__button {
+  width: 100%;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #d05209;
+  color: white;
+  margin-top: 40px;
+  border-radius: 5px;
+  padding: 15px;
+}

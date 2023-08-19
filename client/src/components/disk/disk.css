@@ -1,0 +1,137 @@
+.disk {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.disk__container {
+  margin: 20px 0px;
+  width: 100%;
+  max-width: 900px;
+}
+.disk__btns {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.disk__path {
+  margin-top: 20px;
+  font-size: 18px;
+}
+.disk__back,
+.disk__create,
+.disk__upload-label,
+.disk__sort-select {
+  display: flex;
+  margin-right: 10px;
+  border: 1px solid #c7c7c7;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: white;
+  color: #0e0e0e;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: center;
+}
+.disk__back:hover,
+.disk__create:hover,
+.disk__upload-label:hover,
+.disk__sort-select:hover {
+  border: 1px solid #d05209;
+}
+.disk__back:active,
+.disk__create:active,
+.disk__upload-label:active,
+.disk__sort-select:active {
+  outline: none;
+}
+.disk__sort-select {
+  margin-right: 0;
+}
+.disk__fill {
+  flex-grow: 1;
+}
+.disk__upload-input {
+  display: none;
+}
+.disk__list,
+.disk__plate {
+  height: 20px;
+  width: 20px;
+  align-self: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: no-repeat center center;
+  background-size: contain;
+  color: #d05209;
+  margin-right: 10px;
+}
+.disk__plate {
+  background-image: url("../../assets/img/plates.svg");
+}
+.disk__list {
+  background-image: url("../../assets/img/list.svg");
+}
+.drop-area {
+  width: 100%;
+  height: calc(100vh - 50px);
+  border: dashed #0e0e0e 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+}
+.popup {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.popup__close {
+  cursor: pointer;
+}
+.popup__header {
+  margin-bottom: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.popup__create {
+  width: 100%;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  background-color: #d05209;
+  color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 15px;
+}
+.popup__create:disabled {
+  background-color: #cdcdcd;
+}

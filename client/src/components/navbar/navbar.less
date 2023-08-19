@@ -1,0 +1,62 @@
+@import "../../utils/colors";
+
+.navbar {
+  display: flex;
+  height: 50px;
+  background-color: @navbar-color;
+  width: 100%;
+
+  &__header {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: @primary-color;
+    text-decoration: none;
+  }
+
+  &__login,
+  &__logout {
+    margin-left: auto;
+    margin-right: 20px;
+    color: @text-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__registration {
+    color: @text-color;
+    text-decoration: none;
+  }
+
+  &__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__username {
+    color: @primary-color;    
+  }
+
+  &__search {
+    font-size: 14px;
+    width: 300px;
+    margin: 0 30px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid @secondary-color;
+    outline: none;
+
+    &:focus {
+      outline: none;
+      border-bottom: 2px solid @primary-color !important;
+    }
+  }
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}

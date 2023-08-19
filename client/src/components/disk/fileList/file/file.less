@@ -1,0 +1,135 @@
+@import "../../../../utils/colors.less";
+
+.file {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 4fr repeat(4, 1fr);
+  align-items: center;
+  cursor: pointer;
+
+  &__img {
+    justify-self: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__name {
+    grid-column-start: 2;
+  }
+
+  &__date {
+    grid-column-start: 5;
+    justify-self: center;
+  }
+
+  &__size {
+    grid-column-start: 6;
+    justify-self: center;
+  }
+
+  &__btn {
+    display: none;
+  }
+
+  &:hover &__date {
+    grid-column-start: 3;
+  }
+
+  &:hover &__size {
+    grid-column-start: 4;
+  }
+
+  &:hover &__download {
+    grid-column-start: 5;
+    display: block;
+  }
+
+  &:hover &__delete {
+    grid-column-start: 6;
+    display: block;
+  }
+
+  &__download,
+  &__delete {
+    width: 100%;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  &__download {
+    border-radius: 5px 0 0 5px;
+    background-color: @primary-color;
+    color: @bg-primary;
+  }
+
+  &__delete {
+    border-radius: 0 5px 5px 0;
+    background-color: @secondary-color;
+    color: @text-color;
+  }
+}
+
+.file-plate {
+  width: 120px;
+  margin-top: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    width: 80px;
+    height: 80px;
+  }
+
+  &__btns {
+    display: none;
+    margin-top: 15px;
+  }
+
+  &:hover &__btns {
+    display: flex;
+  }
+
+  &:hover &__name {
+    display: none;
+  }
+
+  &__name {
+    display: flex;
+    width: 80%;
+    margin-top: 10px;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-wrap: break-word;
+    text-overflow: ellipsis;
+  }
+
+  &__download,
+  &__delete {
+    width: 100%;
+    border: none;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  &__download {
+    border-radius: 5px 0 0 5px;
+    background-color: @primary-color;
+    color: @bg-primary;
+  }
+
+  &__delete {
+    border-radius: 0 5px 5px 0;
+    background-color: @secondary-color;
+    color: @text-color;
+  }
+}

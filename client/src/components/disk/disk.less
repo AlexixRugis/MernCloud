@@ -1,0 +1,151 @@
+@import "../../utils/colors.less";
+
+.disk {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    margin: 20px 0px;
+    width: 100%;
+    max-width: 900px;
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  &__path {
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  &__back,
+  &__create,
+  &__upload-label,
+  &__sort-select {
+    display: flex;
+    margin-right: 10px;
+    border: 1px solid @secondary-color;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: @bg-primary;
+    color: @text-color;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    align-items: center;
+
+    &:hover {
+      border: 1px solid @primary-color;
+    }
+
+    &:active {
+        outline: none;
+    }
+  }
+
+  &__sort-select {
+    margin-right: 0;
+  }
+
+  &__fill {
+    flex-grow: 1;
+  }
+
+  &__upload-input {
+    display: none;
+  }
+
+  &__list, &__plate {
+    height: 20px;
+    width: 20px;
+    align-self: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: no-repeat center center;
+    background-size: contain;
+    color: @primary-color;
+    margin-right: 10px;
+  }
+
+  &__plate {
+    background-image: url("../../assets/img/plates.svg");
+  }
+
+  &__list {
+    background-image: url("../../assets/img/list.svg");
+  }
+}
+
+.drop-area {
+  width: 100%;
+  height: calc(100vh - 50px);
+  border: dashed @text-color 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: 50px;
+  right: 0;
+  bottom: 0;
+}
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: @bg-popup;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    background-color: @bg-primary;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+
+  &__header {
+    margin-bottom: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__create {
+    width: 100%;
+    border: none;
+    font-weight: 500;
+    font-size: 14px;
+    background-color: #d05209;
+    color: white;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 15px;
+
+    &:disabled {
+      background-color: @bg-secondary;
+    }
+  }
+}
