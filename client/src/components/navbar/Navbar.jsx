@@ -4,6 +4,7 @@ import Logo from "../../assets/img/logo.png";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../reducers/userReducer";
+import { clear } from "../../reducers/index";
 import { searchFile, getFiles } from "../../actions/file";
 
 const Navbar = () => {
@@ -41,6 +42,11 @@ const Navbar = () => {
     }
   }
 
+  function logoutHandler() {
+    dispatch(logout());
+    dispatch(clear());
+  }
+
   return (
     <div className="navbar">
       <div className="container">
@@ -68,7 +74,7 @@ const Navbar = () => {
           </Link>
         )}
         {isAuth && (
-          <div className="navbar__logout" onClick={() => dispatch(logout())}>
+          <div className="navbar__logout" onClick={logoutHandler}>
             Выход из <span className="navbar__username">{user?.email}</span>
           </div>
         )}

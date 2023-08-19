@@ -1,5 +1,6 @@
 const SET_USER = "SET_USER";
 const LOGOUT = "LOGOUT";
+const CLEAR = 'CLEAR';
 
 const defaultState = {
     currentUser: {},
@@ -21,6 +22,7 @@ export default function userReducer(state = defaultState, action) {
                 currentUser: {},
                 isAuth: false
             }
+        case CLEAR: return defaultState;
         default:
             return state
     }

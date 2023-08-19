@@ -1,5 +1,6 @@
 const SHOW_LOADER = 'SHOW_LOADER';
 const HIDE_LOADER = 'HIDE_LOADER';
+const CLEAR = 'CLEAR';
 
 const defaultState = {
     loader: false
@@ -9,6 +10,7 @@ export default function appReducer(state = defaultState, action) {
     switch (action.type) {
         case SHOW_LOADER: return {...state, loader: true}
         case HIDE_LOADER: return {...state, loader: false}
+        case CLEAR: return defaultState;
         default:
             return state
     }

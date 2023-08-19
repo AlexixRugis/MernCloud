@@ -4,6 +4,7 @@ const ADD_FILE = 'ADD_FILE';
 const PUSH_TO_STACK = 'PUSH_TO_STACK';
 const DELETE_FILE = 'DELETE_FILE';
 const SET_VIEW = 'SET_VIEW';
+const CLEAR = 'CLEAR';
 
 const defaultState = {
     files: [],
@@ -44,6 +45,7 @@ export default function fileReducer(state = defaultState, action) {
                 ...state,
                 view: action.payload
             }
+        case CLEAR: return defaultState;
         default:
             return state
     }

@@ -6,6 +6,8 @@ import userReducer from "./userReducer";
 import uploadReducer from "./uploadReducer";
 import appReducer from "./appReducer";
 
+const CLEAR = 'CLEAR';
+
 const rootReducer = combineReducers({
     user: userReducer,
     file: fileReducer,
@@ -14,3 +16,4 @@ const rootReducer = combineReducers({
 });
 
 export const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
+export const clear = () => ({ type: CLEAR });

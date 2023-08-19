@@ -3,6 +3,7 @@ const HIDE_UPLOADER = "HIDE_UPLOADER";
 const ADD_UPLOAD_FILE = "ADD_UPLOAD_FILE";
 const REMOVE_UPLOAD_FILE = "REMOVE_UPLOAD_FILE";
 const UPDATE_UPLOAD_FILE = "UPDATE_UPLOAD_FILE";
+const CLEAR = "CLEAR";
 
 const defaultState = {
     isVisible: false,
@@ -22,6 +23,7 @@ export default function uploadReducer(state = defaultState, action) {
                 : file
                 )]
         }
+        case CLEAR: return defaultState;
         default:
             return state
     }
