@@ -93,7 +93,7 @@ export function uploadFile(parentDirId, file) {
 export async function downloadFile(file) {
   try {
     const response = await fetch(
-      `api/files/download?id=${file._id}`,
+      `${axios.defaults.baseURL}/api/files/download?id=${file._id}`,
       {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       }
