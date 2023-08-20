@@ -3,18 +3,20 @@
 .file {
   margin-top: 15px;
   display: grid;
-  grid-template-columns: 1fr 4fr repeat(4, 1fr);
+  grid-template-columns: 0.5fr 4fr repeat(4, 1fr);
   align-items: center;
   cursor: pointer;
 
   &__img {
     justify-self: center;
+    margin: 0 10px;
     width: 30px;
     height: 30px;
   }
 
   &__name {
     grid-column-start: 2;
+    margin-left: 10px;
   }
 
   &__date {

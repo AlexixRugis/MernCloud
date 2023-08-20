@@ -16,12 +16,13 @@
 }
 .filelist__header {
   display: grid;
-  grid-template-columns: 1fr 4fr repeat(4, 1fr);
+  grid-template-columns: 0.5fr 4fr repeat(4, 1fr);
   padding-bottom: 10px;
   border-bottom: 1px solid #dac8c8;
 }
 .filelist__name {
-  grid-column-start: 2;
+  grid-column-start: 1;
+  justify-self: center;
 }
 .filelist__date {
   grid-column-start: 5;

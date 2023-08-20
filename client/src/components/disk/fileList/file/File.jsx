@@ -6,6 +6,7 @@ import "./file.css";
 import sizeFormat from "../../../../utils/sizeFormat";
 import DirImg from "../../../../assets/img/directory.svg";
 import FileImg from "../../../../assets/img/file.svg";
+import { formatDate } from "../../../../utils/dateFormat";
 
 const File = ({ file }) => {
   const dispatch = useDispatch();
@@ -38,7 +39,7 @@ const File = ({ file }) => {
           className="file__img"
         />
         <div className="file__name">{file.name}</div>
-        <div className="file__date">{file.date.slice(0, 10)}</div>
+        <div className="file__date">{formatDate(file.date)}</div>
         <div className="file__size">{file.type !== 'dir' ? sizeFormat(file.size) : "-"}</div>
         {file.type !== "dir" && (
           <button
