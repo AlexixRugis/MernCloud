@@ -14,10 +14,12 @@
 .navbar__login,
 .navbar__logout {
   margin-left: auto;
-  margin-right: 20px;
   color: #0e0e0e;
   text-decoration: none;
   cursor: pointer;
+}
+.navbar__login {
+  margin-right: 10px;
 }
 .navbar__registration {
   color: #0e0e0e;
@@ -30,9 +32,15 @@
 .navbar__username {
   color: #d05209;
 }
+.navbar__container {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 .navbar__search {
   font-size: 14px;
-  width: 300px;
+  width: 200px;
   margin: 0 30px;
   padding: 5px;
   border: none;
@@ -42,11 +50,4 @@
 .navbar__search:focus {
   outline: none;
   border-bottom: 2px solid #d05209 !important;
-}
-.container {
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100%;
-  display: flex;
-  align-items: center;
 }

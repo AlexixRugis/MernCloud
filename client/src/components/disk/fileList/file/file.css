@@ -54,7 +54,7 @@
 }
 .file__delete {
   border-radius: 0 5px 5px 0;
-  background-color: #c7c7c7;
+  background-color: #dac8c8;
   color: #0e0e0e;
 }
 .file-plate {
@@ -107,6 +107,6 @@
 }
 .file-plate__delete {
   border-radius: 0 5px 5px 0;
-  background-color: #c7c7c7;
+  background-color: #dac8c8;
   color: #0e0e0e;
 }

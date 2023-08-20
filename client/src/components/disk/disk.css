@@ -4,9 +4,7 @@
   justify-content: center;
 }
 .disk__container {
-  margin: 20px 0px;
-  width: 100%;
-  max-width: 900px;
+  margin: 10px 0px;
 }
 .disk__btns {
   display: flex;
@@ -14,8 +12,22 @@
   width: 100%;
 }
 .disk__path {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin-top: 20px;
-  font-size: 18px;
+  font-size: 24px;
+}
+.disk__path-splitter {
+  margin: 0px 5px;
+}
+.disk__path-item {
+  padding: 5px;
+  cursor: pointer;
+}
+.disk__path-item:hover {
+  background-color: #dac8c8;
+  border-radius: 5px;
 }
 .disk__back,
 .disk__create,
@@ -23,7 +35,7 @@
 .disk__sort-select {
   display: flex;
   margin-right: 10px;
-  border: 1px solid #c7c7c7;
+  border: 1px solid #dac8c8;
   font-weight: 500;
   font-size: 14px;
   background-color: white;

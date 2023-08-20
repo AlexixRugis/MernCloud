@@ -6,9 +6,7 @@
   justify-content: center;
 
   &__container {
-    margin: 20px 0px;
-    width: 100%;
-    max-width: 900px;
+    margin: 10px 0px;
   }
 
   &__btns {
@@ -18,8 +16,24 @@
   }
 
   &__path {
+    display: flex;
+    align-items: center;
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 20px;
+  }
+
+  &__path-splitter {
+    margin: 0px 5px;
+  }
+
+  &__path-item {
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  &__path-item:hover {
+    background-color: @secondary-color;
+    border-radius: 5px;
   }
 
   &__back,
