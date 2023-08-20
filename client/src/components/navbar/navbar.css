@@ -38,16 +38,32 @@
   align-items: center;
   height: 100%;
 }
+.navbar__search-row {
+  flex-grow: 1;
+  max-width: 300px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  background-color: #ececec;
+  border-radius: 10px;
+  margin: 0 30px;
+}
 .navbar__search {
+  flex-grow: 1;
   font-size: 14px;
   width: 200px;
-  margin: 0 30px;
   padding: 5px;
   border: none;
-  border-bottom: 2px solid #c7c7c7;
   outline: none;
+  background-color: transparent;
 }
-.navbar__search:focus {
-  outline: none;
-  border-bottom: 2px solid #d05209 !important;
+.navbar__search-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+  color: #dac8c8;
+  background: no-repeat center center;
+  background-size: contain;
+  background-image: url("../../assets/img/search.svg");
 }

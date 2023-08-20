@@ -13,10 +13,9 @@
 }
 .disk__path {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   margin-top: 20px;
-  font-size: 24px;
+  font-size: 20px;
 }
 .disk__path-splitter {
   margin: 0px 5px;
@@ -145,5 +144,5 @@
   padding: 15px;
 }
 .popup__create:disabled {
-  background-color: #cdcdcd;
+  background-color: #ececec;
 }

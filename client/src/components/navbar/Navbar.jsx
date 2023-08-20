@@ -53,13 +53,16 @@ const Navbar = () => {
             MERN CLOUD
           </Link>
           {isAuth && (
-            <input
-              value={searchName}
-              onChange={searchHandler}
-              type="text"
-              className="navbar__search"
-              placeholder="Найти..."
-            />
+            <div className="navbar__search-row">
+              <div className="navbar__search-icon" />
+              <input
+                value={searchName}
+                onChange={searchHandler}
+                type="text"
+                className="navbar__search"
+                placeholder="Найти..."
+              />
+            </div>
           )}
           {!isAuth && (
             <Link to="/login" className="navbar__login">
