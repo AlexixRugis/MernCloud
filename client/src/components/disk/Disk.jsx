@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { useLocation } from "react-router-dom";
 import {
   setCurrentDir,
   setStackIndex,
@@ -18,6 +19,8 @@ const Disk = () => {
   const [dragEnter, setDragEnter] = useState(false);
   const [popupVisible, setPopupVisible] = useState(false);
   const [sort, setSort] = useState("type");
+  const location = useLocation();
+  console.log(location);
 
   useEffect(() => {
     dispatch(getFiles(currentDir?._id, sort));

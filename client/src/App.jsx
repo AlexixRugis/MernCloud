@@ -28,8 +28,8 @@ function App() {
           </Routes>
         ) : (
           <Routes>
-            <Route exact path="/" Component={Disk} />
-            <Route path="*" element={<Navigate to="/" replace/>}/>
+            <Route exact path="/" Component={Disk}/>
+            <Route path="*" element={<Navigate to="/" replace/>} />
           </Routes>
         )}
       </div>

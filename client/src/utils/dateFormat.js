@@ -5,6 +5,5 @@ export const formatDate = (date) => {
     day: "numeric",
     timezone: "UTC",
   };
-  console.log(typeof date);
   return new Date(date).toLocaleString("ru", options);
 };
