@@ -14,6 +14,7 @@ router.post(
   FileController.createDir
 );
 router.get("", authMiddleware, FileController.getFiles);
+router.get("/dir", authMiddleware, FileController.getDirInfo);
 router.get("/download", authMiddleware, FileController.downloadFile);
 router.get("/search", authMiddleware, FileController.searchFile);
 router.delete("/", authMiddleware, FileController.deleteFile);
