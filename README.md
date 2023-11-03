@@ -6,4 +6,4 @@ Mern stack study project
 
 ![скриншот приложения](./images/img1.png)
 
-Видео обзор здесь: 
+Видео обзор здесь: https://www.youtube.com/watch?v=iD7ZYgHwvog
